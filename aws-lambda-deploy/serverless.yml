@@ -4,9 +4,9 @@ service: kft-csengine
 frameworkVersion: ">=3.0.0"
 
 
-plugins:
-  - serverless-add-api-key
-  - serverless-vpc-discovery
+# plugins:
+#   - serverless-add-api-key
+#   - serverless-vpc-discovery
   
 custom:
   appName: csengine
