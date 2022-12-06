@@ -80,14 +80,10 @@ functions:
     description: ${self:provider.stage}-${self:custom.appName}
     image: 923083696216.dkr.ecr.${self:provider.region}.amazonaws.com/${self:provider.stage}-csengine:latest
     timeout: 30
-    events: 
-    - http:
-        path: api/v1/
-        method: get
-        cors: true
+    events:
+      - http:
+          method: any
+          path: /{proxy+}        
 #        private: true
         
 
-plugins:
-  - serverless-add-api-key
-  - serverless-vpc-discovery
