@@ -43,6 +43,7 @@ provider:
             - "ecr:InitiateLayerUpload"
             - "ecr:SetRepositoryPolicy"
             - "ecr:GetRepositoryPolicy"
+            - "ecr:DescribeImages"
           Resource:
             !Join 
               - ':'
@@ -86,3 +87,7 @@ functions:
         cors: true
 #        private: true
         
+
+plugins:
+  - serverless-add-api-key
+  - serverless-vpc-discovery
